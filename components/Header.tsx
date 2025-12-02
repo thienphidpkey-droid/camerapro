@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Search, ShoppingBag, Menu, ChevronDown, Sun, Moon, X } from 'lucide-react';
+import { Search, Menu, ChevronDown, X } from 'lucide-react';
 import { NAV_CONFIG } from '../constants';
 import { Brand, Category } from '../types';
 import { View } from '../App';
@@ -38,8 +38,8 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <>
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-          ? 'bg-white/80 dark:bg-[#0A0A0F]/80 backdrop-blur-lg border-b border-gray-200/50 dark:border-gray-800/50 py-3 shadow-sm'
-          : 'bg-transparent py-5'
+        ? 'bg-white/80 dark:bg-[#0A0A0F]/80 backdrop-blur-lg border-b border-gray-200/50 dark:border-gray-800/50 py-3 shadow-sm'
+        : 'bg-transparent py-5'
         }`}>
         <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
 
@@ -62,14 +62,14 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
             <button
-              onClick={() => onNavigate('home')}
+              onClick={() => { onNavigate('home'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
               className={`text-sm font-medium transition-colors hover:text-purple-600 dark:hover:text-white ${activeView === 'home' ? 'text-purple-600 dark:text-white' : 'text-gray-600 dark:text-gray-300'
                 }`}
             >
               Trang chủ
             </button>
             <button
-              onClick={() => onNavigate('catalogue')}
+              onClick={() => { onNavigate('catalogue'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
               className={`text-sm font-medium transition-colors hover:text-purple-600 dark:hover:text-white ${activeView === 'catalogue' ? 'text-purple-600 dark:text-white' : 'text-gray-600 dark:text-gray-300'
                 }`}
             >
@@ -80,7 +80,7 @@ export const Header: React.FC<HeaderProps> = ({
               <div key={item.label} className="relative group h-full">
                 <button
                   className="flex items-center gap-1 text-sm font-medium text-gray-600 dark:text-gray-300 group-hover:text-purple-600 dark:group-hover:text-white transition-colors py-2"
-                  onClick={() => onSelectCategory(item.category)}
+                  onClick={() => { onSelectCategory(item.category); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
                 >
                   {item.label}
                   <ChevronDown className="w-3 h-3 transition-transform duration-300 group-hover:-rotate-180" />
@@ -95,6 +95,7 @@ export const Header: React.FC<HeaderProps> = ({
                         onClick={(e) => {
                           e.stopPropagation();
                           onSelectCategory(item.category, brand);
+                          window.scrollTo({ top: 0, behavior: 'smooth' });
                         }}
                         className="block w-full text-left px-4 py-2.5 text-sm rounded-xl text-gray-600 dark:text-gray-400 hover:text-purple-700 dark:hover:text-white hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-all"
                       >
@@ -107,7 +108,7 @@ export const Header: React.FC<HeaderProps> = ({
             ))}
 
             <button
-              onClick={() => onNavigate('news')}
+              onClick={() => { onNavigate('news'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
               className={`text-sm font-medium transition-colors hover:text-purple-600 dark:hover:text-white ${activeView === 'news' ? 'text-purple-600 dark:text-white' : 'text-gray-600 dark:text-gray-300'
                 }`}
             >
@@ -119,11 +120,6 @@ export const Header: React.FC<HeaderProps> = ({
           <div className="flex items-center gap-3 md:gap-5">
             <button aria-label="Tìm kiếm" className="p-2 text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors">
               <Search className="w-5 h-5" />
-            </button>
-
-            <button aria-label="Giỏ hàng" className="relative p-2 group">
-              <ShoppingBag className="w-5 h-5 text-gray-500 dark:text-gray-400 group-hover:text-black dark:group-hover:text-white transition-colors" />
-              <span className="absolute top-0 right-0 w-4 h-4 bg-red-500 text-white text-[10px] flex items-center justify-center rounded-full font-bold shadow-sm ring-2 ring-white dark:ring-[#0A0A0F]">0</span>
             </button>
 
             <button
