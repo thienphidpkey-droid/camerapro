@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cameraprostudio.vn/sitemap.xml

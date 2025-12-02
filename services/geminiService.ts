@@ -3,6 +3,8 @@ import { GoogleGenAI, GenerateContentResponse } from "@google/genai";
 
 // Initialize the client.
 // NOTE: process.env.API_KEY is assumed to be available in the environment.
+// WARNING: This exposes the API key to the client. Ensure your API key has strict referer restrictions 
+// in the Google Cloud Console to prevent unauthorized usage.
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
 
 export const generateCameraAdvice = async (
