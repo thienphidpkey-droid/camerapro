@@ -49,12 +49,12 @@ export const Header: React.FC<HeaderProps> = ({
             onClick={() => onNavigate('home')}
           >
             <div className="relative w-9 h-9">
-              <div className="absolute inset-0 bg-gradient-to-tr from-purple-600 to-blue-500 rounded-xl transform rotate-3 group-hover:rotate-6 transition-transform"></div>
+              <div className="absolute inset-0 bg-gradient-to-tr from-red-600 to-blue-500 rounded-xl transform rotate-3 group-hover:rotate-6 transition-transform"></div>
               <div className="absolute inset-0 bg-black dark:bg-white flex items-center justify-center rounded-xl border border-white/20">
                 <span className="text-white dark:text-black font-bold text-sm">CP</span>
               </div>
             </div>
-            <span className="text-xl font-bold tracking-tight text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-300 transition-colors">
+            <span className="text-xl font-bold tracking-tight text-gray-900 dark:text-white group-hover:text-red-600 dark:group-hover:text-orange-300 transition-colors">
               Camera Pro
             </span>
           </div>
@@ -63,14 +63,14 @@ export const Header: React.FC<HeaderProps> = ({
           <nav className="hidden md:flex items-center gap-8">
             <button
               onClick={() => { onNavigate('home'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-              className={`text-sm font-medium transition-colors hover:text-purple-600 dark:hover:text-white ${activeView === 'home' ? 'text-purple-600 dark:text-white' : 'text-gray-600 dark:text-gray-300'
+              className={`text-sm font-medium transition-colors hover:text-red-600 dark:hover:text-white ${activeView === 'home' ? 'text-red-600 dark:text-white' : 'text-gray-600 dark:text-gray-300'
                 }`}
             >
               Trang chủ
             </button>
             <button
               onClick={() => { onNavigate('catalogue'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-              className={`text-sm font-medium transition-colors hover:text-purple-600 dark:hover:text-white ${activeView === 'catalogue' ? 'text-purple-600 dark:text-white' : 'text-gray-600 dark:text-gray-300'
+              className={`text-sm font-medium transition-colors hover:text-red-600 dark:hover:text-white ${activeView === 'catalogue' ? 'text-red-600 dark:text-white' : 'text-gray-600 dark:text-gray-300'
                 }`}
             >
               Sản phẩm
@@ -79,7 +79,7 @@ export const Header: React.FC<HeaderProps> = ({
             {NAV_CONFIG.map((item) => (
               <div key={item.label} className="relative group h-full">
                 <button
-                  className="flex items-center gap-1 text-sm font-medium text-gray-600 dark:text-gray-300 group-hover:text-purple-600 dark:group-hover:text-white transition-colors py-2"
+                  className="flex items-center gap-1 text-sm font-medium text-gray-600 dark:text-gray-300 group-hover:text-red-600 dark:group-hover:text-white transition-colors py-2"
                   onClick={() => { onSelectCategory(item.category); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
                 >
                   {item.label}
@@ -97,7 +97,7 @@ export const Header: React.FC<HeaderProps> = ({
                           onSelectCategory(item.category, brand);
                           window.scrollTo({ top: 0, behavior: 'smooth' });
                         }}
-                        className="block w-full text-left px-4 py-2.5 text-sm rounded-xl text-gray-600 dark:text-gray-400 hover:text-purple-700 dark:hover:text-white hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-all"
+                        className="block w-full text-left px-4 py-2.5 text-sm rounded-xl text-gray-600 dark:text-gray-400 hover:text-red-700 dark:hover:text-white hover:bg-orange-50 dark:hover:bg-red-900/20 transition-all"
                       >
                         {brand}
                       </button>
@@ -109,7 +109,7 @@ export const Header: React.FC<HeaderProps> = ({
 
             <button
               onClick={() => { onNavigate('news'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-              className={`text-sm font-medium transition-colors hover:text-purple-600 dark:hover:text-white ${activeView === 'news' ? 'text-purple-600 dark:text-white' : 'text-gray-600 dark:text-gray-300'
+              className={`text-sm font-medium transition-colors hover:text-red-600 dark:hover:text-white ${activeView === 'news' ? 'text-red-600 dark:text-white' : 'text-gray-600 dark:text-gray-300'
                 }`}
             >
               Tin tức
@@ -151,12 +151,12 @@ export const Header: React.FC<HeaderProps> = ({
 
           {NAV_CONFIG.map((item) => (
             <div key={item.label}>
-              <div className="font-bold text-purple-600 dark:text-purple-400 mb-4 uppercase text-xs tracking-widest">{item.label}</div>
+              <div className="font-bold text-red-600 dark:text-orange-400 mb-4 uppercase text-xs tracking-widest">{item.label}</div>
               <div className="grid grid-cols-2 gap-4">
                 {item.brands.map(brand => (
                   <button
                     key={brand}
-                    className="text-left p-3 rounded-lg bg-gray-50 dark:bg-white/5 text-sm font-medium text-gray-700 dark:text-gray-300 active:bg-purple-100 dark:active:bg-purple-900/40"
+                    className="text-left p-3 rounded-lg bg-gray-50 dark:bg-white/5 text-sm font-medium text-gray-700 dark:text-gray-300 active:bg-orange-100 dark:active:bg-red-900/40"
                     onClick={() => {
                       onSelectCategory(item.category, brand);
                       setMobileMenuOpen(false);

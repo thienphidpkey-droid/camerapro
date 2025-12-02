@@ -81,7 +81,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({
                          onClick={() => toggleComparison(product)}
                          className={`flex items-center gap-2 px-4 py-2 rounded-full shadow-lg backdrop-blur-sm hover:scale-105 transition-all text-sm font-medium ${
                              isSelectedForCompare 
-                                ? 'bg-purple-600 text-white' 
+                                ? 'bg-red-600 text-white' 
                                 : 'bg-white/90 dark:bg-black/60 text-gray-900 dark:text-white'
                          }`}
                       >
@@ -98,7 +98,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({
                   
                   {/* Header */}
                   <div className="mb-6">
-                      <span className="text-purple-600 dark:text-purple-400 text-sm font-bold tracking-widest uppercase mb-2 block">{product.brand}</span>
+                      <span className="text-red-600 dark:text-orange-400 text-sm font-bold tracking-widest uppercase mb-2 block">{product.brand}</span>
                       <h1 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-3 leading-tight">{product.name}</h1>
                       <div className="flex items-center gap-4 mt-2">
                           <p className="text-2xl text-gray-900 dark:text-white font-light">
@@ -120,7 +120,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({
                   {/* Specs Table */}
                   <div className="mb-8">
                       <h3 className="text-gray-900 dark:text-white font-medium mb-4 flex items-center gap-2">
-                          <Layers className="w-4 h-4 text-purple-600 dark:text-purple-400" /> Thông số kỹ thuật
+                          <Layers className="w-4 h-4 text-red-600 dark:text-orange-400" /> Thông số kỹ thuật
                       </h3>
                       <div className="bg-gray-50 dark:bg-[#15151A] rounded-xl border border-gray-100 dark:border-gray-800 overflow-hidden text-sm">
                           <div className="grid grid-cols-2 p-3 border-b border-gray-200 dark:border-gray-800/50 hover:bg-gray-100 dark:hover:bg-white/5">
@@ -184,9 +184,9 @@ export const ProductModal: React.FC<ProductModalProps> = ({
                           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
                               {relatedProducts.map(relProduct => (
                                   <div key={relProduct.id} onClick={() => onSelectRelated(relProduct)} className="cursor-pointer group">
-                                      <div className="bg-gray-50 dark:bg-[#15151A] rounded-lg p-3 flex flex-col items-center border border-gray-100 dark:border-gray-800 hover:border-purple-500 transition-colors">
+                                      <div className="bg-gray-50 dark:bg-[#15151A] rounded-lg p-3 flex flex-col items-center border border-gray-100 dark:border-gray-800 hover:border-orange-500 transition-colors">
                                           <img src={relProduct.image} alt={relProduct.name} className="h-24 object-contain mb-2 mix-blend-multiply dark:mix-blend-normal" />
-                                          <h4 className="text-xs font-semibold text-center line-clamp-2 text-gray-800 dark:text-white group-hover:text-purple-600">{relProduct.name}</h4>
+                                          <h4 className="text-xs font-semibold text-center line-clamp-2 text-gray-800 dark:text-white group-hover:text-red-600">{relProduct.name}</h4>
                                           <span className="text-xs text-gray-500 mt-1">{relProduct.price.toLocaleString('vi-VN')} ₫</span>
                                       </div>
                                   </div>
@@ -197,7 +197,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({
 
                   {/* Actions */}
                   <div className="mt-auto space-y-3 pt-6 border-t border-gray-100 dark:border-gray-800">
-                      <Button variant="primary" className="w-full py-4 text-base shadow-lg shadow-purple-500/20 dark:shadow-purple-900/20">
+                      <Button variant="primary" className="w-full py-4 text-base shadow-lg shadow-orange-500/20 dark:shadow-red-900/20">
                           Thêm vào giỏ hàng
                       </Button>
                       <Button variant="outline" className="w-full">

@@ -29,7 +29,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
 
                     <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white leading-[1.1] tracking-tight mb-6 animate-fade-in-up delay-100">
                         Nắm bắt <br className="hidden md:block" />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600 dark:from-purple-400 dark:via-blue-400 dark:to-white">Sự hoàn hảo.</span>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-blue-600 dark:from-orange-400 dark:via-blue-400 dark:to-white">Sự hoàn hảo.</span>
                     </h1>
 
                     <p className="max-w-xl text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-10 leading-relaxed font-light animate-fade-in-up delay-200">
@@ -50,21 +50,21 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                 <div className="lg:col-span-5 flex flex-col justify-center animate-fade-in-up delay-300">
                     <div className="bg-black/40 backdrop-blur-xl border border-white/10 rounded-2xl p-8 shadow-2xl">
                         <h3 className="text-white font-semibold mb-6 flex items-center gap-2">
-                            <span className="w-1 h-6 bg-purple-500 rounded-full"></span>
+                            <span className="w-1 h-6 bg-orange-500 rounded-full"></span>
                             Thương hiệu Hàng đầu
                         </h3>
                         <div className="grid grid-cols-2 gap-4">
                             {brands.map((brand) => (
                                 <div
                                     key={brand}
-                                    className="group relative h-14 bg-black/40 hover:bg-white/10 border border-white/5 hover:border-purple-500/50 hover:shadow-[0_0_20px_rgba(139,92,246,0.6)] rounded-xl flex items-center justify-center transition-all duration-300 cursor-pointer overflow-hidden"
+                                    className="group relative h-14 bg-black/40 hover:bg-white/10 border border-white/5 hover:border-orange-500/50 hover:shadow-[0_0_20px_rgba(239,68,68,0.6)] rounded-xl flex items-center justify-center transition-all duration-300 cursor-pointer overflow-hidden"
                                     onClick={() => onNavigate('catalogue')}
                                 >
                                     <span className="text-gray-300 font-medium group-hover:text-white tracking-wide z-10 relative group-hover:scale-110 transition-transform">
                                         {brand}
                                     </span>
                                     {/* Hover glow effect */}
-                                    <div className="absolute inset-0 bg-gradient-to-br from-purple-600/10 dark:from-purple-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                                    <div className="absolute inset-0 bg-gradient-to-br from-red-600/10 dark:from-red-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                                 </div>
                             ))}
                         </div>

@@ -13,7 +13,7 @@ interface ProductCardProps {
 export const ProductCard: React.FC<ProductCardProps> = ({ product, onClick, onCompareToggle, isSelectedForCompare }) => {
   return (
     <div
-      className="group relative flex flex-col bg-white dark:bg-[#15151A] rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-purple-500/10 border border-gray-100 dark:border-gray-800"
+      className="group relative flex flex-col bg-white dark:bg-[#15151A] rounded-2xl overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-orange-500/10 border border-gray-100 dark:border-gray-800"
     >
       {/* Badges */}
       <div className="absolute top-4 left-4 z-20 flex flex-col gap-2">
@@ -23,7 +23,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onClick, onCo
           </span>
         )}
         {product.isBestSeller && (
-          <span className="px-2 py-1 bg-purple-600 text-white text-[10px] font-bold uppercase tracking-wider rounded backdrop-blur-md shadow-sm">
+          <span className="px-2 py-1 bg-red-600 text-white text-[10px] font-bold uppercase tracking-wider rounded backdrop-blur-md shadow-sm">
             Best Seller
           </span>
         )}
@@ -38,8 +38,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onClick, onCo
               onCompareToggle(product);
             }}
             className={`p-2 rounded-full transition-all duration-300 ${isSelectedForCompare
-              ? 'bg-purple-600 text-white shadow-lg shadow-purple-500/30'
-              : 'bg-white/80 dark:bg-black/40 text-gray-500 hover:text-purple-600 hover:bg-white backdrop-blur-sm'
+              ? 'bg-red-600 text-white shadow-lg shadow-orange-500/30'
+              : 'bg-white/80 dark:bg-black/40 text-gray-500 hover:text-red-600 hover:bg-white backdrop-blur-sm'
               }`}
             title="So sánh"
           >
@@ -69,10 +69,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onClick, onCo
         className="p-5 flex flex-col flex-1 relative z-20 bg-white dark:bg-[#15151A]"
       >
         <div className="mb-1">
-          <span className="text-xs text-purple-600 dark:text-purple-400 font-bold tracking-widest uppercase">{product.brand}</span>
+          <span className="text-xs text-red-600 dark:text-orange-400 font-bold tracking-widest uppercase">{product.brand}</span>
         </div>
 
-        <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-4 line-clamp-2 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+        <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-4 line-clamp-2 group-hover:text-red-600 dark:group-hover:text-orange-400 transition-colors">
           {product.name}
         </h3>
 
@@ -84,7 +84,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onClick, onCo
             </span>
           </div>
 
-          <button className="w-9 h-9 rounded-full bg-gray-100 dark:bg-white/10 flex items-center justify-center text-gray-600 dark:text-white group-hover:bg-purple-600 group-hover:text-white transition-all duration-300">
+          <button className="w-9 h-9 rounded-full bg-gray-100 dark:bg-white/10 flex items-center justify-center text-gray-600 dark:text-white group-hover:bg-red-600 group-hover:text-white transition-all duration-300">
             <Eye className="w-5 h-5" />
           </button>
         </div>

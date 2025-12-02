@@ -23,7 +23,7 @@ export const NewsSection: React.FC = () => {
                    <article 
                         key={news.id} 
                         onClick={() => setSelectedNews(news)}
-                        className="group cursor-pointer flex flex-col h-full bg-white dark:bg-[#1A1A23]/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-100 dark:border-white/5 hover:border-purple-300 dark:hover:border-purple-500/30 transition-all shadow-md hover:shadow-xl dark:shadow-none dark:hover:shadow-purple-900/10"
+                        className="group cursor-pointer flex flex-col h-full bg-white dark:bg-[#1A1A23]/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-100 dark:border-white/5 hover:border-orange-300 dark:hover:border-orange-500/30 transition-all shadow-md hover:shadow-xl dark:shadow-none dark:hover:shadow-red-900/10"
                         itemScope 
                         itemType="https://schema.org/NewsArticle"
                    >
@@ -44,13 +44,13 @@ export const NewsSection: React.FC = () => {
                                <Clock className="w-3 h-3" />
                                <time dateTime={news.date.split('/').reverse().join('-')} itemProp="datePublished">{news.date}</time>
                            </div>
-                           <h3 className="text-xl font-bold text-gray-900 dark:text-white leading-tight group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors mb-3" itemProp="headline">
+                           <h3 className="text-xl font-bold text-gray-900 dark:text-white leading-tight group-hover:text-red-600 dark:group-hover:text-orange-400 transition-colors mb-3" itemProp="headline">
                                {news.title}
                            </h3>
                            <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-3 leading-relaxed mb-6" itemProp="description">
                                {news.excerpt}
                            </p>
-                           <div className="mt-auto pt-4 border-t border-gray-100 dark:border-white/5 flex items-center text-purple-600 dark:text-purple-400 text-sm font-medium group-hover:text-purple-500 dark:group-hover:text-purple-300">
+                           <div className="mt-auto pt-4 border-t border-gray-100 dark:border-white/5 flex items-center text-red-600 dark:text-orange-400 text-sm font-medium group-hover:text-orange-500 dark:group-hover:text-orange-300">
                                Đọc thêm <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                            </div>
                        </div>

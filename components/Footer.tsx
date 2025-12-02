@@ -24,20 +24,20 @@ export const Footer: React.FC = () => {
               <nav>
                   <h4 className="text-gray-900 dark:text-white font-medium mb-6">Cửa hàng</h4>
                   <ul className="space-y-4 text-sm text-gray-600 dark:text-gray-500">
-                      <li className="hover:text-purple-600 dark:hover:text-purple-400 cursor-pointer transition-colors"><a href="#">Máy ảnh Mirrorless</a></li>
-                      <li className="hover:text-purple-600 dark:hover:text-purple-400 cursor-pointer transition-colors"><a href="#">Ống kính Chính hãng</a></li>
-                      <li className="hover:text-purple-600 dark:hover:text-purple-400 cursor-pointer transition-colors"><a href="#">Thiết bị Studio</a></li>
-                      <li className="hover:text-purple-600 dark:hover:text-purple-400 cursor-pointer transition-colors"><a href="#">Phụ kiện Vlog</a></li>
+                      <li className="hover:text-red-600 dark:hover:text-orange-400 cursor-pointer transition-colors"><a href="#">Máy ảnh Mirrorless</a></li>
+                      <li className="hover:text-red-600 dark:hover:text-orange-400 cursor-pointer transition-colors"><a href="#">Ống kính Chính hãng</a></li>
+                      <li className="hover:text-red-600 dark:hover:text-orange-400 cursor-pointer transition-colors"><a href="#">Thiết bị Studio</a></li>
+                      <li className="hover:text-red-600 dark:hover:text-orange-400 cursor-pointer transition-colors"><a href="#">Phụ kiện Vlog</a></li>
                   </ul>
               </nav>
 
               <nav>
                   <h4 className="text-gray-900 dark:text-white font-medium mb-6">Hỗ trợ</h4>
                   <ul className="space-y-4 text-sm text-gray-600 dark:text-gray-500">
-                      <li className="hover:text-purple-600 dark:hover:text-purple-400 cursor-pointer transition-colors"><a href="#">Liên hệ tư vấn</a></li>
-                      <li className="hover:text-purple-600 dark:hover:text-purple-400 cursor-pointer transition-colors"><a href="#">Chính sách vận chuyển</a></li>
-                      <li className="hover:text-purple-600 dark:hover:text-purple-400 cursor-pointer transition-colors"><a href="#">Đổi trả & Bảo hành</a></li>
-                      <li className="hover:text-purple-600 dark:hover:text-purple-400 cursor-pointer transition-colors"><a href="#">Hướng dẫn mua trả góp</a></li>
+                      <li className="hover:text-red-600 dark:hover:text-orange-400 cursor-pointer transition-colors"><a href="#">Liên hệ tư vấn</a></li>
+                      <li className="hover:text-red-600 dark:hover:text-orange-400 cursor-pointer transition-colors"><a href="#">Chính sách vận chuyển</a></li>
+                      <li className="hover:text-red-600 dark:hover:text-orange-400 cursor-pointer transition-colors"><a href="#">Đổi trả & Bảo hành</a></li>
+                      <li className="hover:text-red-600 dark:hover:text-orange-400 cursor-pointer transition-colors"><a href="#">Hướng dẫn mua trả góp</a></li>
                   </ul>
               </nav>
 
@@ -55,8 +55,8 @@ export const Footer: React.FC = () => {
                       </a>
                   </div>
                   <div className="relative">
-                      <input type="email" placeholder="Đăng ký nhận tin" className="w-full bg-white dark:bg-white/5 border border-gray-300 dark:border-gray-800 rounded-full py-3 px-4 text-sm text-gray-900 dark:text-white focus:outline-none focus:border-purple-500 transition-colors shadow-sm dark:shadow-none" />
-                      <button className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 bg-purple-600 rounded-full text-white hover:bg-purple-500" aria-label="Subscribe">
+                      <input type="email" placeholder="Đăng ký nhận tin" className="w-full bg-white dark:bg-white/5 border border-gray-300 dark:border-gray-800 rounded-full py-3 px-4 text-sm text-gray-900 dark:text-white focus:outline-none focus:border-orange-500 transition-colors shadow-sm dark:shadow-none" />
+                      <button className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 bg-red-600 rounded-full text-white hover:bg-orange-500" aria-label="Subscribe">
                           <ChevronRight className="w-3 h-3" />
                       </button>
                   </div>

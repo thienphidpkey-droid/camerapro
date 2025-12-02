@@ -34,7 +34,7 @@ export const NewsModal: React.FC<NewsModalProps> = ({ news, onClose }) => {
                 <X className="w-5 h-5" />
              </button>
              <div className="absolute bottom-4 left-6 z-20">
-                 <span className="px-3 py-1 bg-purple-600 text-white text-xs font-bold uppercase rounded-md mb-3 inline-block shadow-sm">
+                 <span className="px-3 py-1 bg-red-600 text-white text-xs font-bold uppercase rounded-md mb-3 inline-block shadow-sm">
                      {news.category}
                  </span>
                  <h2 className="text-2xl md:text-3xl font-bold text-white leading-tight max-w-2xl drop-shadow-lg [text-shadow:_0_1px_10px_rgb(0_0_0_/_60%)]">
@@ -50,7 +50,7 @@ export const NewsModal: React.FC<NewsModalProps> = ({ news, onClose }) => {
                      <Calendar className="w-4 h-4" />
                      <span>{news.date}</span>
                  </div>
-                 <button className="flex items-center gap-2 hover:text-purple-600 dark:hover:text-white transition-colors">
+                 <button className="flex items-center gap-2 hover:text-red-600 dark:hover:text-white transition-colors">
                      <Share2 className="w-4 h-4" />
                      Chia sẻ
                  </button>
@@ -66,7 +66,7 @@ export const NewsModal: React.FC<NewsModalProps> = ({ news, onClose }) => {
                  ) : (
                      <p className="text-gray-500 italic">Nội dung chi tiết đang được cập nhật...</p>
                  )}
-                 <p className="text-gray-600 dark:text-gray-400 mt-8 italic text-sm border-l-4 border-purple-500 pl-4">{news.excerpt}</p>
+                 <p className="text-gray-600 dark:text-gray-400 mt-8 italic text-sm border-l-4 border-orange-500 pl-4">{news.excerpt}</p>
              </div>
          </div>
       </article>

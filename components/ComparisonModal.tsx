@@ -42,7 +42,7 @@ export const ComparisonModal: React.FC<ComparisonModalProps> = ({ products, onCl
                             </button>
                             <img src={product.image} alt={product.name} className="h-32 object-contain mb-4 mix-blend-multiply dark:mix-blend-normal" />
                             <h3 className="font-bold text-sm text-gray-900 dark:text-white mb-2">{product.name}</h3>
-                            <span className="text-purple-600 dark:text-purple-400 font-bold">{product.price.toLocaleString('vi-VN')} ₫</span>
+                            <span className="text-red-600 dark:text-orange-400 font-bold">{product.price.toLocaleString('vi-VN')} ₫</span>
                         </div>
                     ))}
                     {/* Placeholder for empty slots */}

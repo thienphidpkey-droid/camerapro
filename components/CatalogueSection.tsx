@@ -50,7 +50,7 @@ export const CatalogueSection: React.FC<CatalogueSectionProps> = ({
                         <div className="bg-white dark:bg-[#15151A] p-6 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-sm">
                             <div className="flex items-center justify-between mb-6">
                                 <div className="flex items-center gap-2">
-                                    <SlidersHorizontal className="w-5 h-5 text-purple-600 dark:text-purple-400" />
+                                    <SlidersHorizontal className="w-5 h-5 text-red-600 dark:text-orange-400" />
                                     <h3 className="text-lg font-bold text-gray-900 dark:text-white">Bộ lọc</h3>
                                 </div>
                                 {hasFilters && (
@@ -73,12 +73,12 @@ export const CatalogueSection: React.FC<CatalogueSectionProps> = ({
                                                 key={cat}
                                                 onClick={() => toggleCategory(cat)}
                                                 className={`group flex items-center justify-between p-3 rounded-xl cursor-pointer transition-all duration-200 ${filters.category === cat
-                                                        ? 'bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300 font-medium'
+                                                        ? 'bg-orange-50 dark:bg-red-900/20 text-red-700 dark:text-orange-300 font-medium'
                                                         : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-white/5'
                                                     }`}
                                             >
                                                 <span>{cat}</span>
-                                                {filters.category === cat && <Check className="w-4 h-4 text-purple-600" />}
+                                                {filters.category === cat && <Check className="w-4 h-4 text-red-600" />}
                                             </div>
                                         ))}
                                     </div>
@@ -94,7 +94,7 @@ export const CatalogueSection: React.FC<CatalogueSectionProps> = ({
                                                 onClick={() => toggleBrand(brand)}
                                                 className={`px-4 py-2 text-xs font-medium rounded-lg border transition-all duration-200 ${filters.brand === brand
                                                         ? 'bg-gray-900 text-white border-gray-900 dark:bg-white dark:text-black dark:border-white shadow-md'
-                                                        : 'border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:border-purple-400 dark:hover:border-gray-500 bg-white dark:bg-transparent'
+                                                        : 'border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:border-orange-400 dark:hover:border-gray-500 bg-white dark:bg-transparent'
                                                     }`}
                                             >
                                                 {brand}
@@ -114,7 +114,7 @@ export const CatalogueSection: React.FC<CatalogueSectionProps> = ({
                             <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
                                 {filters.category ? filters.category : 'Tất cả sản phẩm'}
                             </h2>
-                            {filters.brand && <span className="text-purple-600 dark:text-purple-400 text-sm mt-1 block">Thương hiệu: {filters.brand}</span>}
+                            {filters.brand && <span className="text-red-600 dark:text-orange-400 text-sm mt-1 block">Thương hiệu: {filters.brand}</span>}
                         </div>
                         <span className="text-gray-500 dark:text-gray-400 text-sm font-medium bg-gray-100 dark:bg-white/5 px-3 py-1 rounded-full self-start sm:self-auto">
                             {filteredProducts.length} kết quả
@@ -142,7 +142,7 @@ export const CatalogueSection: React.FC<CatalogueSectionProps> = ({
                             <p className="text-gray-500 dark:text-gray-400 text-sm mb-6">Thử thay đổi bộ lọc hoặc tìm kiếm từ khóa khác.</p>
                             <button
                                 onClick={() => setFilters({ brand: null, category: null, minPrice: 0, maxPrice: 200000000 })}
-                                className="text-purple-600 dark:text-purple-400 hover:underline text-sm font-medium"
+                                className="text-red-600 dark:text-orange-400 hover:underline text-sm font-medium"
                             >
                                 Xóa tất cả bộ lọc
                             </button>
