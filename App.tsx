@@ -95,14 +95,14 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen font-sans overflow-x-hidden flex flex-col relative selection:bg-purple-500/30 selection:text-black dark:selection:text-white transition-colors duration-500">
 
-      {/* Dark Mode Background with Black Camera */}
+      {/* Dark Mode Background */}
       <div className="fixed inset-0 z-[-1] pointer-events-none">
         <div className="absolute inset-0 bg-[#0A0A0F]">
           <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed opacity-40 mix-blend-overlay"
-            style={{ backgroundImage: "url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=2564&auto=format&fit=crop')" }}
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed "
+            style={{ backgroundImage: "" }}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0F] via-[#0A0A0F]/90 to-[#121217]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0F] via-[#0A0A0F]/95 to-[#0f0f14]" />
         </div>
       </div>
 
@@ -200,3 +200,4 @@ const App: React.FC = () => {
 };
 
 export default App;
+
