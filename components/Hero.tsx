@@ -57,7 +57,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                     {brands.map((brand) => (
                         <div 
                             key={brand}
-                            className="group relative h-20 bg-gray-50 dark:bg-black/40 hover:bg-white dark:hover:bg-white/10 border border-gray-200 dark:border-white/5 hover:border-purple-500/50 rounded-xl flex items-center justify-center transition-all duration-300 cursor-pointer overflow-hidden shadow-sm dark:shadow-none"
+                            className="group relative h-14 bg-gray-50 dark:bg-black/40 hover:bg-white dark:hover:bg-white/10 border border-gray-200 dark:border-white/5 hover:border-purple-500/50 rounded-xl flex items-center justify-center transition-all duration-300 cursor-pointer overflow-hidden shadow-sm dark:shadow-none"
                             onClick={() => onNavigate('catalogue')}
                         >
                             <span className="text-gray-600 dark:text-gray-300 font-medium group-hover:text-purple-600 dark:group-hover:text-white tracking-wide z-10 relative group-hover:scale-110 transition-transform">
