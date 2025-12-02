@@ -99,7 +99,7 @@ const App: React.FC = () => {
       <div className="fixed inset-0 z-[-1] pointer-events-none">
         <div className="absolute inset-0 bg-[#0A0A0F]">
           <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed opacity-10"
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed opacity-40 mix-blend-overlay"
             style={{ backgroundImage: "" }}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0F] via-[#0A0A0F]/95 to-[#0f0f14]" />
